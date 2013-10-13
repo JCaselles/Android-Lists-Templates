@@ -3,6 +3,7 @@ package com.arnauorriols.apps.templates.liststemplates;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.SimpleAdapter;
+import android.view.View;
 
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -41,6 +42,12 @@ public class SimpleListActivity extends ListActivity
             rowData.put("fourth_item", "Fourth item - row " + (x+1));
             listOfRows.add(rowData);
         }
+    }
+
+    public void removeRow(View v) {
+        int position = getListView().getPositionForView(v);
+        listOfRows.remove(position);
+        ((SimpleAdapter) getListAdapter()).notifyDataSetChanged();
     }
 }
 
