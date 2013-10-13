@@ -46,7 +46,11 @@ public class SimpleListActivity extends ListActivity
     }
 
 
-    // row_layout.xml:'delete_button':onClick="removeRow"
+    /**
+     * Definition of the onClick atribute of the 'delete_button'.
+     * row_layout has a button ('@id/delete_button') with the attribute
+     * android:onClick="removeRow"
+     */
     public void removeRow(View v) {
         int position = getListView().getPositionForView(v);
         listOfRows.remove(position);
@@ -54,6 +58,12 @@ public class SimpleListActivity extends ListActivity
     }
 
 
+    /**
+     * Creates a button programatically instead of in xml, and sets it
+     * as the header and footer of the ListView.
+     * It defines the onClickListener interface to set the onClick
+     * behavior: to add a new row to the ListView, and scroll to it.
+     */
     private void addButtonToListHeaderFooter(ListView _lv) {
         final ListView lv = _lv;
         Button headerFooterButton = new Button(this);
