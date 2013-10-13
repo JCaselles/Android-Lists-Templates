@@ -44,6 +44,7 @@ public class SimpleListActivity extends ListActivity
         }
     }
 
+    // row_layout.xml:'delete_button':onClick="removeRow"
     public void removeRow(View v) {
         int position = getListView().getPositionForView(v);
         listOfRows.remove(position);
