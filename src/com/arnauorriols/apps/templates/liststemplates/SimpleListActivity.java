@@ -8,6 +8,7 @@ import android.widget.AbsListView.LayoutParams;
 import android.widget.Button;
 import android.view.Gravity;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.ArrayList;
@@ -92,10 +93,21 @@ public class SimpleListActivity extends ListActivity
         int listRowNum = _listRowNum + 1;
         rowData.put("first_item", "First item - row " + (listRowNum));
         rowData.put("second_item", "Second item - row " + (listRowNum));
-        rowData.put("third_item", "Third item - row " + (listRowNum));
+        rowData.put("third_item", "CLICK ME! - row " + (listRowNum));
         rowData.put("fourth_item", "Fourth item - row " + (listRowNum));
 
         return rowData;
+    }
+
+
+    /**
+     * Definition of the onClick attribute of 'third_view' TextView.
+     * Displays a toast notification when clicking this particular
+     * TextView of every row.
+     */
+    public void congratuleMe(View v) {
+        Toast.makeText(SimpleListActivity.this, "Congratulations!",
+                                                    Toast.LENGTH_SHORT).show();
     }
 }
 
