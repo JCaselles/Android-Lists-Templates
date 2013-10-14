@@ -18,6 +18,11 @@
     android:layout_weight="1"
     android:padding="5dp"
     />
+
+<!--
+     third_view is clickable: declares an onClick method 'congratuleMe'.
+     In order to be able to click a TextView 'clickable' attribute is needed.
+  -->
 <TextView
     android:id="@+id/third_view"
     android:layout_width="wrap_content"
